@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <div class="content">
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Add Student</h2>
+        <form id="studentForm">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="course">Course:</label><br>
+          <input type="text" id="course" name="course" required><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="class">Class:</label><br>
+          <select id="class" name="class" required>
+            <option value="Class 1">Class 1</option>
+            <option value="Class 2">Class 2</option>
+            <option value="Class 3">Class 3</option>
+            <option value="Class 4">Class 4</option>
+            <option value="Class 5">Class 5</option>
+          </select><br><br>
+
+          <button type="submit">Add Student</button>
+        </form>
+      </div>
+
+      <!-- Student List Section -->
+      <div class="list-section">
+        <h2>Student List</h2>
+        <label for="classFilter">Filter by Class:</label>
+        <select id="classFilter" name="classFilter" onchange="filterStudents()">
+          <option value="All">All</option>
+          <option value="Class 1">Class 1</option>
+          <option value="Class 2">Class 2</option>
+          <option value="Class 3">Class 3</option>
+          <option value="Class 4">Class 4</option>
+          <option value="Class 5">Class 5</option>
+        </select>
+        <ul id="studentList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
